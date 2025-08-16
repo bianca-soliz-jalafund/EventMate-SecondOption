@@ -1,0 +1,53 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "eslint 'src/**/*.ts' --fix",
+    "build": "tsc",
+    "postbuild": "mkdir -p lib/templates && cp -r src/templates/* lib/templates/",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "npm run build && firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express-handlebars": "^8.0.1",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "handlebars": "^4.7.8",
+    "module-alias": "^2.2.3",
+    "nodemailer": "^7.0.5",
+    "nodemailer-express-handlebars": "^7.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/node": "^20.0.0",
+    "@types/nodemailer": "^6.4.14",
+    "@types/nodemailer-express-handlebars": "^4.0.5",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "firebase-functions-test": "^3.1.0",
+    "prettier": "^3.6.2",
+    "typescript": "~5.3.3"
+  },
+  "_moduleAliases": {
+    "@features": "lib/features",
+    "@shared": "lib/shared",
+    "@templates": "templates"
+  },
+  "private": true
+}
