@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+}
+
+@theme {
+  --color-primary-100: #e6f4ff;
+  --color-primary-200: #91caff;
+  --color-primary-300: #1677ff;
+  --color-primary-400: #0958d9;
+
+  --color-primary-hover: #1677ff;
+}
+
+@layer utilities {
+  .txt-bold-16 {
+    @apply font-bold text-[16px];
+  }
+  .txt-regular-16 {
+    @apply font-normal text-[16px];
+  }
+  .txt-regular-18 {
+    @apply font-normal text-[18px];
+  }
+
+  .txt-regular-20 {
+    @apply font-normal text-[20px];
+  }
+
+  .bg-hero-gradient {
+    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100;
+  }
+
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .border-gradient-accent {
+    @apply bg-gradient-to-r from-blue-400 to-purple-400;
+  }
+
+  .animate-gradient {
+    background-size: 200% auto;
+    animation: gradient-shift 3s ease-in-out infinite alternate;
+  }
+
+  .animate-expand {
+    animation: expand 1s ease-out 0.8s forwards;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes expand {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@layer components {
+  .input-base-style {
+    @apply w-full py-2 transition-all duration-200 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed  placeholder:text-gray-400;
+  }
+
+  .input-default-style {
+    @apply border rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500;
+  }
+
+  .input-style-comp{
+    @apply w-full py-2 transition-all duration-200 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed  placeholder:text-gray-400 border rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500;
+  }
+}
