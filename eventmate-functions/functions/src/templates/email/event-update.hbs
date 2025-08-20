@@ -1,0 +1,63 @@
+<h2>📢 Actualización del Evento</h2>
+
+<p>Hola,</p>
+
+<p>Te informamos que el evento <strong>{{eventTitle}}</strong> al que estás invitado ha sido actualizado por <strong>{{ownerName}}</strong>.</p>
+
+<div class="warning">
+    <strong>⚠️ Información Actualizada</strong>
+    <p>Por favor, revisa los nuevos detalles del evento para asegurarte de tener la información más reciente.</p>
+</div>
+
+<div class="event-details">
+    <h3>📅 Nuevos Detalles del Evento</h3>
+    
+    <div class="detail-item">
+        <span class="detail-label">Título:</span>
+        <strong>{{eventTitle}}</strong>
+    </div>
+    
+    <div class="detail-item">
+        <span class="detail-label">Fecha:</span>
+        <strong>{{eventDate}}</strong>
+    </div>
+    
+    <div class="detail-item">
+        <span class="detail-label">Lugar:</span>
+        <strong>{{eventPlace}}</strong>
+    </div>
+    
+    {{#if eventDescription}}
+    <div class="detail-item">
+        <span class="detail-label">Descripción:</span>
+        <p style="margin: 10px 0;">{{eventDescription}}</p>
+    </div>
+    {{/if}}
+    
+    <div class="detail-item">
+        <span class="detail-label">Organizador:</span>
+        {{ownerName}}
+    </div>
+</div>
+
+<div class="success">
+    <strong>¿Qué hacer ahora?</strong>
+    <ul style="margin: 10px 0; padding-left: 20px;">
+        <li>Revisa si la nueva fecha y hora te convienen</li>
+        <li>Anota el nuevo lugar en tu calendario</li>
+        <li>Confirma tu asistencia si aún no lo has hecho</li>
+    </ul>
+</div>
+
+<div style="text-align: center; margin: 30px 0;">
+    <a href="#" class="button">Ver Evento Completo</a>
+</div>
+
+<p><strong>Importante:</strong> Si no puedes asistir con los nuevos detalles, puedes actualizar tu respuesta en cualquier momento desde tu perfil.</p>
+
+<p>Si tienes alguna pregunta sobre estos cambios, no dudes en contactar con <strong>{{ownerName}}</strong>.</p>
+
+<p>Gracias por tu comprensión.</p>
+
+<p>Saludos,<br>
+<strong>El equipo de EventApp</strong></p>

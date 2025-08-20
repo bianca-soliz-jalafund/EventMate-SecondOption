@@ -1,0 +1,60 @@
+<h2>¡Has sido invitado a un evento!</h2>
+
+<p>Hola,</p>
+
+<p><strong>{{ownerName}}</strong> te ha invitado a participar en un evento increíble. Para poder acceder y gestionar tu invitación, necesitas registrarte en nuestra plataforma.</p>
+
+<div class="event-details">
+    <h3>📅 Detalles del Evento</h3>
+    
+    <div class="detail-item">
+        <span class="detail-label">Título:</span>
+        <strong>{{eventTitle}}</strong>
+    </div>
+    
+    <div class="detail-item">
+        <span class="detail-label">Fecha:</span>
+        {{eventDate}}
+    </div>
+    
+    <div class="detail-item">
+        <span class="detail-label">Lugar:</span>
+        {{eventPlace}}
+    </div>
+    
+    {{#if eventDescription}}
+    <div class="detail-item">
+        <span class="detail-label">Descripción:</span>
+        <p style="margin: 10px 0;">{{eventDescription}}</p>
+    </div>
+    {{/if}}
+    
+    <div class="detail-item">
+        <span class="detail-label">Organizador:</span>
+        {{ownerName}}
+    </div>
+</div>
+
+<div class="success">
+    <strong>¡No te pierdas esta oportunidad!</strong>
+    <p>Regístrate ahora para confirmar tu asistencia y recibir todas las actualizaciones del evento.</p>
+</div>
+
+<div style="text-align: center; margin: 30px 0;">
+    <a href="{{registerUrl}}" class="button">Registrarme Ahora</a>
+</div>
+
+<p>Una vez registrado, podrás:</p>
+<ul>
+    <li>✅ Confirmar tu asistencia al evento</li>
+    <li>🔔 Recibir notificaciones sobre cambios</li>
+    <li>👥 Ver otros asistentes</li>
+    <li>📱 Acceder a toda la información desde tu perfil</li>
+</ul>
+
+<p>Si tienes alguna pregunta sobre este evento, puedes contactar directamente con <strong>{{ownerName}}</strong>.</p>
+
+<p>¡Esperamos verte pronto en nuestra plataforma!</p>
+
+<p>Saludos,<br>
+<strong>El equipo de EventApp</strong></p>
